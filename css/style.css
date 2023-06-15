@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+
+/* CCS geral */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--cor-input-base);
+}
+
+:root{
+
+    /* variáveis cores */
+    --color-back-base: #1E1E1E;
+    --color-text-base: white;
+    --color-titulo-base: white;
+    --color-subtitulo-base: #DBC96C;
+    --color-text-base-marca: black;
+    --marca-opcoes-base: #D9D9D9;
+    --back-article: #252525;
+
+    /* variáveis tamanhos de texto */
+    --font-size-title: 300%;
+    --font-size-text-base: 120%;
+    --font-size-text-base-menos: 100%;
+    --font-size-text-menu: 160%;
+    --font-size-text-menu-select: 200%;
+
+    /* variáveis cor fundo input */
+
+    --cor-input-base: #FFFFFF;
+
+    /* variavéis font-family */
+
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --font-family-abhaya-libre: 'Abhaya Libre', serif;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--color-back-base);
+}
+
+/* CCS do header */
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 12vh;
+
+}
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+}
+header .search-perfil{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+
+}
+
+header .form-search-header{
+    border-radius: 50px;
+    background-color: var(--marca-opcoes-base);
+    padding: 0.7rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+header .form-search-header a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+header .form-search-header input{
+    background-color: var(--marca-opcoes-base);
+    outline: none;
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 0.5rem;
+
+    color: var(--color-back-base);
+    caret-color: var(--color-back-base);
+    font-size: var(--font-size-text-base-menos);
+}
+
+header nav a.menu-item{
+    color: var(--cor-input-base);
+    text-decoration: none;
+
+    background-color: var();
+
+    font-family: var(--font-family-abhaya-libre);
+    font-size: var(--font-size-text-menu);
+}
+header nav a.menu-item-select{
+    color: var(--color-text-base-marca);
+    text-decoration: none;
+
+    background-color: var(--marca-opcoes-base);
+    padding: 1rem;
+    border-radius: 50px;
+
+    font-family: var(--font-family-abhaya-libre);
+    font-size: var(--font-size-text-menu-select);
+}
+
+/* CSS do main */
+
+main{
+    height: 88vh;
+} 
+
+main .container-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    gap: 1rem;
+}
+main .container-slider .container-images{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+main .container-slider .container-images .slider{
+    opacity: 0;
+    transition: opacity 2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 20px;
+}
+
+main .container-slider .container-images .slider.on{
+    opacity: 1;
+}
+
+main .container-slider button#prev-button, button#next-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+main .container-slider button#prev-button img, button#next-button img{
+    width: 100%;
+    height: 100%;
+} 
+
+
+
+/* CSS section default */
+
+section{
+    padding-block: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4rem;
+}
+section h2.title{
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-title);
+    color: var(--cor-input-base);
+    font-weight: 800;
+    width: 100%;
+}
+
+/* CCS articles */
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 80vw;
+
+    padding: 3.5rem;
+    gap: 2rem;
+
+    background-color: var(--back-article);
+
+    border-radius: 50px;
+
+    font-family: var(--font-family-montserrat);
+}
+
+article h2.title-article{
+    font-size: var(--font-size-title);
+    color: var(--cor-input-base);
+    font-weight: 800;
+}
+
+article p.content-article{
+    color: var(--cor-input-base);
+    font-size: var(--font-size-text-base);
+}
+
+/* CCS artistas emergentes */
+
+section.artistas-emergentes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 10vw;
+}
+
+section.artistas-emergentes .cards-artists{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 5rem;
+}
+
+/* responsividade do header */
+
+@media (max-width: 1200px)
+{
+    header .search-perfil{
+        display: none;
+    }
+    .nav-computer{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+    }
+}
