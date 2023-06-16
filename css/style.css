@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 /* CCS geral */
 
@@ -22,11 +23,11 @@
     --back-article: #252525;
 
     /* variáveis tamanhos de texto */
-    --font-size-title: 300%;
-    --font-size-text-base: 120%;
-    --font-size-text-base-menos: 100%;
-    --font-size-text-menu: 160%;
-    --font-size-text-menu-select: 200%;
+    --font-size-title: clamp(100%, 290%, 320%);
+    --font-size-text-base: clamp(100%, 120%, 140%);
+    --font-size-text-base-menos: clamp(80%, 100%, 120%);
+    --font-size-text-menu: clamp(140%, 160%, 180%);
+    --font-size-text-menu-select: clamp(180%, 200%, 220%);
 
     /* variáveis cor fundo input */
 
@@ -36,6 +37,7 @@
 
     --font-family-montserrat: 'Montserrat', sans-serif;
     --font-family-abhaya-libre: 'Abhaya Libre', serif;
+    --font-family-dm-serif-display: 'DM Serif Display', serif;
 }
 
 body{
@@ -53,17 +55,23 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 1rem;
 
-    height: 12vh;
+    /* height: 12vh; */
 
 }
+/* tirando visibilidade do botão de menu do mobile */
+header #btn-menu-mobile{
+    display: none;
+}
+
+/* css navigation pc */ 
 header nav{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 4rem;
-
 }
 header .search-perfil{
     display: flex;
@@ -113,6 +121,7 @@ header nav a.menu-item{
 
     font-family: var(--font-family-abhaya-libre);
     font-size: var(--font-size-text-menu);
+    transition: padding 0.2s;
 }
 header nav a.menu-item-select{
     color: var(--color-text-base-marca);
@@ -126,10 +135,64 @@ header nav a.menu-item-select{
     font-size: var(--font-size-text-menu-select);
 }
 
+/* css navigation do mobile */
+
+.nav-mobile{
+    z-index: 3;
+    position: absolute;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: var(--color-back-base);
+    transition: all 0.5s;
+}
+.nav-mobile .header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 2rem;
+}
+.nav-mobile nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+.nav-mobile nav a{
+    text-decoration: none;
+}
+.nav-mobile nav a.menu-item{
+    background-color: var(--back-article);
+    color: var(--cor-input-base);
+
+    padding-block: 3rem;
+    width: 70vw;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    font-family: var(--font-family-dm-serif-display);
+    font-size: var(--font-size-text-menu-select);
+    font-weight: 400;
+
+    transition: background-color 1s;
+}
+.nav-mobile nav a.menu-item:hover{
+    background-color: var(--color-subtitulo-base);
+    color: var(--color-back-base);
+}
+
 /* CSS do main */
 
 main{
-    height: 88vh;
+    height: 80vh;
 } 
 
 main .container-slider{
@@ -153,6 +216,7 @@ main .container-slider .container-images .slider{
     position: absolute;
     width: 100%;
     border-radius: 20px;
+    z-index: 2;
 }
 
 main .container-slider .container-images .slider.on{
@@ -230,7 +294,7 @@ article p.content-article{
 
 /* CCS artistas emergentes */
 
-section.artistas-emergentes{
+section#artistas-emergentes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -239,7 +303,7 @@ section.artistas-emergentes{
     padding-left: 10vw;
 }
 
-section.artistas-emergentes .cards-artists{
+section#artistas-emergentes .cards-artists{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,13 +316,36 @@ section.artistas-emergentes .cards-artists{
 
 @media (max-width: 1200px)
 {
-    header .search-perfil{
-        display: none;
-    }
-    .nav-computer{
-        display: none;
-    }
-    .nav-mobile{
+    header{
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        padding-inline: 3rem;
+    
+        /* height: 12vh; */
+    
     }
+    header #btn-menu-mobile{
+        display: flex;
+        cursor: pointer;
+    }
+    #close-menu-mobile{
+        cursor: pointer;
+    }
+    #nav{
+        display: none;
+    }
+    main{
+        height: 50vh;
+    } 
+}
+
+@media (max-width: 600px)
+{
+    main{
+        height: 40vh;
+    } 
 }

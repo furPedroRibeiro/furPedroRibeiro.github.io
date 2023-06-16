@@ -7,44 +7,59 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
-        <nav class="nav-computer">
-            <a href="" class="menu-item" tabindex="0">Sobre nós</a>
-            <a href="" class="menu-item" tabindex="0">Ínicio</a>
-            <a href="" class="menu-item" tabindex="0">Gêneros</a>
-            <a href="" class="menu-item-select" tabindex="0">Comunidade</a>
+<body id="body">
+    <div class="nav-mobile" id="nav-mobile">
+        <div aria-label="Cabeçalho do menu" class="header">
+            <img src="assets/fechar.svg" alt="X para fechar o menu" width="50px" id="close-menu-mobile">
+        </div>
+        <nav>
+            <a href="#" class="menu-item">SOBRE NÓS</a>
+            <a href="#" class="menu-item">ÍNICIO</a>
+            <a href="#" class="menu-item">GÊNEROS</a>
+            <a href="#" class="menu-item">COMUNIDADE</a>
         </nav>
-        <nav class="nav-mobile">
-
+    </div> 
+    <span id="content-pc">
+        <header id="header">
+            <img src="assets/menu.svg" alt="Ícone de menu de três barras" width="50px" id="btn-menu-mobile">
+        <nav id="nav">
+            <a href="index.html">
+                <img src="assets/logo-templo-backtransparent.svg" alt="" width="80px">
+            </a>
+            <a href="#" class="menu-item" id="item-one" tabindex="0">Sobre nós</a>
+            <a href="#" class="menu-item menu-item-select" id="item-two" tabindex="0" onclick="itemTwo()">Ínicio</a>
+            <a href="#" class="menu-item" id="item-three" tabindex="0" onclick="itemThree()">Gêneros</a>
+            <a href="#" class="menu-item" id="item-four" tabindex="0" onclick="itemFour()">Comunidade</a>
         </nav>
         <div class="search-perfil">
-            <div action="" method="post" class="form-search-header">
+            <!-- 
+                input de pesquisa para todas as páginas
+                <div action="" method="post" class="form-search-header">
                 <a href="https://instagram.com/ars.libri">
                     <img src="assets/lupa.svg" alt="" aria-label="lupa de pesquisa clicável após texto da pesquisa ser escrito">
                 </a>
                 <input type="text" id="search" name="search"  aria-label="Caixa de pesquisa para buscar material disponível no site, clicar na lupa após digitar" tabindex="0">
-            </div>
+            </div> -->
             <a href="https://instagram.com/ars.libri">
                 <img src="assets/user-empty.png" alt="Imagem de perfil do usuário que está ativo" id="icon-perfil" width="75px" aria-label="imagem de pefil do usuário">
             </a>
         </div>
     </header>
-    <main>
+    <main id="main">
         <div class="container-slider">
             <button id="prev-button" tabindex="0">
                 <img src="assets/left-arrow.svg" alt="Botão de voltar o slider" >
             </button>
             <div class="container-images">
-                    <img src="assets/exslidesLit.svg" alt="" width="100%" aria-label="Slide falando sobre literatura: lorem ipsum. Botão de ir para a página de literatura." class="slider on">
-                    <img src="assets/exslidesHist.svg" alt="" width="100%" aria-label="Slide falando sobre história: lorem ipsum. Botão de ir para a página de literatura." class="slider">
+                    <img src="assets/exslidesLit.svg" alt="" width="100%" aria-label="Slide falando sobre literatura: lorem ipsum. Botão de ir para a página de literatura." class="slider on" tabindex="0">
+                    <img src="assets/exslidesHist.svg" alt="" width="100%" aria-label="Slide falando sobre história: lorem ipsum. Botão de ir para a página de literatura." class="slider" tabindex="0">
             </div>
             <button id="next-button" tabindex="0">
                 <img src="assets/right-arrow.svg" alt="Botão de avançar slider" >
             </button>
         </div>
     </main>
-    <section class="nichos-ars-libri">
+    <section id="nichos-ars-libri">
         <article>
             <h2 class="title-article">
                 Movimentos literários
@@ -70,7 +85,7 @@
             <p class="content-article">Lero Lero Lero o Guilherme é corno</p>
         </article>
     </section>
-    <section class="artistas-emergentes">
+    <section id="artistas-emergentes">
         <h2 class="title">Artistas emergentes</h2>
         <div class="cards-artists">
             <div class="card-artist">1</div>
@@ -81,7 +96,8 @@
             <div class="card-artist">6</div>
         </div>
     </section>
-    <footer></footer>
+    <footer id="footer"></footer>
+    </span>
     <script src="src/script.js" defer></script>
 </body>
 </html>
