@@ -2,19 +2,19 @@
     {
         "id": "1",
         "name": "Arte",
-        "img": "https://arslibri.com.br/assets/categorias/Noite-Estrelada.-Vincent-van-Gogh.webp",
+        "img": "https://arslibri.com.br/assets/categorias/Noite-Estrelada.-Vincent-van-Gogh.jpeg",
         "alt": "Imagem com vários rostos com diversas cores e formas geométricas diferentes"
     },
     {
         "id": "2",
         "name": "História",
-        "img": "https://arslibri.com.br/assets/categorias/catarse-guerra-fria.webp",
+        "img": "https://arslibri.com.br/assets/categorias/catarse-guerra-fria.jpeg",
         "alt": "Imagem de Dom Pedro proclamando a independência do Brasil"
     },
     {
         "id": "3",
         "name": "Literatura",
-        "img": "https://arslibri.com.br/assets/vinijr.webp",
+        "img": "https://arslibri.com.br/assets/vinijr.jpeg",
         "alt": "Imagem de Machado de Assis com o Rio de Janeiro de fundo"
     }
 ]
