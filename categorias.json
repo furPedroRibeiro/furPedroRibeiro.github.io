@@ -2,13 +2,13 @@
     {
         "id": "1",
         "name": "Arte",
-        "img": "https://arslibri.com.br/assets/categorias/Noite-Estrelada.-Vincent-van-Gogh.jpeg",
+        "img": "https://arslibri.com.br/assets/categorias/Noite-Estrelada.-Vincent-van-Gogh.jpg",
         "alt": "Imagem com vários rostos com diversas cores e formas geométricas diferentes"
     },
     {
         "id": "2",
         "name": "História",
-        "img": "https://arslibri.com.br/assets/categorias/catarse-guerra-fria.jpeg",
+        "img": "https://arslibri.com.br/assets/categorias/catarse-guerra-fria.jpg",
         "alt": "Imagem de Dom Pedro proclamando a independência do Brasil"
     },
     {
